@@ -12,7 +12,7 @@ SECTOR_DATA_PATH = 'NSE_data_stock_market_sectors_2023_2024.csv'
 df = pd.read_csv(DATA_PATH)
 sector_df = pd.read_csv(SECTOR_DATA_PATH)
 
-df = df.merge(sector_df[['Code', 'Sector']], on='Code', how='left')
+df = df.merge(sector_df[['Stock_code', 'Sector']], on='Code', how='left')
 
 stocks = df['Code'].unique()
 
